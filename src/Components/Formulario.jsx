@@ -15,7 +15,7 @@ const Formulario = () => {
   const [modoEdicion, setModoEdicion] = React.useState(false);
   const [id, setId] = React.useState("");
   const [error, setError] = React.useState(null);
-  const imagen = "https://picsum.photos/300";
+  const imagen = "https://picsum.photos/100";
   const texto_alt = "Esto es una imagen de picsum";
 
   React.useEffect(() => {
@@ -173,7 +173,7 @@ const Formulario = () => {
             <li className="list-group-item">
               <span className="lead">
                 Nombre - Enlace - Proveedor - Cargador - Likes - Dislikes -
-                Descripción
+                Descripción-Imagen
               </span>
             </li>
             {lista.map((item) => (
@@ -181,7 +181,7 @@ const Formulario = () => {
                 <span className="lead">
                   {item.nombre} - {item.enlace} - {item.proveedor} -{" "}
                   {item.cargador} - {item.likes} - {item.dislikes} -{" "}
-                  {item.descripcion}
+                  {item.descripcion}-
                 </span>
                 <img src={imagen} alt={texto_alt} />
                 <button
